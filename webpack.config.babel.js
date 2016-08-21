@@ -1,7 +1,7 @@
 import path from 'path';
 
 export default {
-  devtool: 'eval',
+  devtool: 'source-map',
   entry: './src/index',
   output: {
     path: path.join(__dirname, 'dist'),
