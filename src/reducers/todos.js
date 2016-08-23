@@ -14,7 +14,7 @@ const byId = (state = {}, action) => {
   }
 };
 
-const allIds = (state = {}, action) => {
+const allIds = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
       return [...state, action.id];
