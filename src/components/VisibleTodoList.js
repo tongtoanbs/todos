@@ -17,9 +17,8 @@ class VisibleTodoList extends Component {
     }
   }
   fetchTodos() {
-    const { filter, fetchTodos, requestTodos } = this.props;
+    const { filter, fetchTodos } = this.props;
 
-    requestTodos(filter);
     fetchTodos(filter)
   }
   render() {
@@ -38,8 +37,7 @@ VisibleTodoList.PropTypes = {
   todos: PropTypes.array.isRequired,
   onTodoClick: PropTypes.func.isRequired,
   receiveTodos: PropTypes.func.isRequired,
-  isFetching: PropTypes.bool,
-  requestTodos: PropTypes.func.isRequired
+  isFetching: PropTypes.bool
 };
 
 const mapStateToProps = (state, { params }) => {
